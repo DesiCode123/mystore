@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto generation of primarykey
     private int categoryId;
 
     private String name;
