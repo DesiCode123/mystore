@@ -7,6 +7,7 @@ import com.sharmila.mystore.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -30,8 +31,16 @@ public class HomeService {
 
     public List<Product> gelAllProductByCategory(String categoryName){
         Category category = categoryRepository.findByName(categoryName);
-        return
+        List<Product> productsByCategory = new ArrayList<>(category.getProducts());
+        return productsByCategory;
 
+    }
+    public void saveCategory(Category category){
+        categoryRepository.save(category);
+    }
+    public Category getOneCategory(Integer category){
+        Category category1 = categoryRepository.findById(category).get();
+        return category1;
     }
 
 }

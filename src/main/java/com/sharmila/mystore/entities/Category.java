@@ -1,5 +1,6 @@
 package com.sharmila.mystore.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy = "category",orphanRemoval = true)
+    @JsonIgnore
     private Set<Product> products = new LinkedHashSet<>();
 
 

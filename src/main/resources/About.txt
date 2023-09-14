@@ -1,0 +1,20 @@
+Spring dependencies:
+
+Selvfølgelig! Her er en kort beskrivelse av de nevnte Spring-avhengighetene på norsk:
+
+1. **Spring Data JPA (SQL)**
+   Spring Data JPA er en del av Spring Data-familien.
+   Den gir en enkel måte å implementere JPA-baserte repositorier på, noe som reduserer standardkode når man arbeider med databaser.
+   Den integreres sømløst med Spring's transaksjonshåndtering.
+
+2. **Spring Web (WEB)**
+   Spring Web-modulen gir funksjonaliteter for å bygge webapplikasjoner.
+   Den inneholder funksjoner for utvikling av RESTful webtjenester og integreres med Spring's MVC-rammeverk.
+
+3. **MySQL Driver (SQL)**
+   MySQL Driver er en JDBC-kompatibel driver som gir tilkobling til MySQL databaser.
+   I kombinasjon med Spring Data JPA lar den applikasjoner samhandle med en MySQL database.
+
+4. **Lombok (Developer Tools)**
+   Lombok er et verktøy som hjelper deg med å skrive mindre kode ved å automatisk generere standard funksjoner som getters, setters, og konstruktører.
+   Med Lombok kan du enkelt holde koden din ryddig og kort.
