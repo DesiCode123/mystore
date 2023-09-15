@@ -43,4 +43,11 @@ public class HomeService {
         return category1;
     }
 
+    public Product getOneProduct(String name){
+        Product product1 = productRepository.findByName(name);
+        return product1;
+    }
+    public void saveProduct(Product name){
+        productRepository.save(name);
+    }
 }

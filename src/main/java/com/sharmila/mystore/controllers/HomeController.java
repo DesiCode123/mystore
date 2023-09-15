@@ -46,5 +46,17 @@ public class HomeController {
         Category oneCategory = homeService.getOneCategory(categoryId);
         return oneCategory;
     }
+
+    @GetMapping("/getOneProduct")
+    public Product getOneProduct(@RequestParam String product){
+        Product product1 = homeService.getOneProduct(product);
+        return product1;
+    }
+
+    @PostMapping("/addProduct/addProduct")
+    public void  addOneProduct(@RequestBody Product product){
+        homeService.saveProduct(product);
+
+    }
 //save product and get product
 }
