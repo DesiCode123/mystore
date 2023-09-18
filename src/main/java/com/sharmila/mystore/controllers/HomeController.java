@@ -3,6 +3,7 @@ package com.sharmila.mystore.controllers;
 import com.sharmila.mystore.entities.Category;
 import com.sharmila.mystore.entities.Product;
 import com.sharmila.mystore.services.HomeService;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.query.Jpa21Utils;
 import org.springframework.web.bind.annotation.*;
@@ -48,15 +49,33 @@ public class HomeController {
     }
 
     @GetMapping("/getOneProduct")
-    public Product getOneProduct(@RequestParam String product){
-        Product product1 = homeService.getOneProduct(product);
+    public Product getOneProduct(@RequestParam Integer productId){
+        Product product1 = homeService.getOneProduct(productId);
         return product1;
     }
 
     @PostMapping("/addProduct")
     public void  addOneProduct(@RequestBody Product product){
         homeService.saveProduct(product);
+    }
+
+    @DeleteMapping("/deleteProduct")
+    public void deleteProduct(@RequestParam Integer productId){
+        homeService.deleteProduct(productId);
+    }
+
+    @DeleteMapping("/deleteCategory")
+    public void deleteCategory(@RequestParam Integer categoryId){
+        homeService.deleteCategory(categoryId);
 
     }
-//save product and get product
+
+    @PutMapping("/updateCategory")
+    public Category updateCategory(@RequestBody Category category){
+       Category category1 = homeService.updateCategory(category);
+       return category1;
+    }
+
+
+//updateproduct
 }
