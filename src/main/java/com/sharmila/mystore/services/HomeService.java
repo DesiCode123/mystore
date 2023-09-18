@@ -47,7 +47,7 @@ public class HomeService {
         Product product1 = productRepository.findByName(name);
         return product1;
     }
-    public void saveProduct(Product name){
-        productRepository.save(name);
+    public void saveProduct(Product product){
+        productRepository.save(product);
     }
 }

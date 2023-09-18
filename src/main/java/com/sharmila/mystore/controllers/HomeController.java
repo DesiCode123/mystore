@@ -53,7 +53,7 @@ public class HomeController {
         return product1;
     }
 
-    @PostMapping("/addProduct/addProduct")
+    @PostMapping("/addProduct")
     public void  addOneProduct(@RequestBody Product product){
         homeService.saveProduct(product);
 
