@@ -74,6 +74,9 @@ public class HomeService {
     public Category updateCategory(Category category) {
         Category category1 = categoryRepository.save(category);
         return category1;
-
+    }
+    public Product updateProduct(Product product){
+        Product product1 = productRepository.save(product);
+        return product1;
     }
 }

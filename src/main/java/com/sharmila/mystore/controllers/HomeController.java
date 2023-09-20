@@ -76,6 +76,12 @@ public class HomeController {
        return category1;
     }
 
+    @PostMapping("/updateProduct")
+    public Product updateProduct(@RequestBody Product product){
+        Product product1 = homeService.updateProduct(product);
+        return product1;
+    }
+
 
 //updateproduct
 }
