@@ -1,0 +1,8 @@
+spring-boot-starter-webflux
+is for building reactive and non-blocking web applications.
+spring-boot-starter-thymeleaf
+is for rendering dynamic HTML templates on the server-side.
+a
+When you include these dependencies, and you run a Maven build (like mvn clean install),
+Maven downloads the necessary libraries and integrates them into your project,
+allowing you to use the functionalities provided by these libraries in your code.
